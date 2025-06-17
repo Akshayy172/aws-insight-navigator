@@ -1,9 +1,8 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { alert-triangle, shield, info } from "lucide-react";
+import { AlertTriangle, Shield, Info } from "lucide-react";
 
 const securityAlerts = [
   {
@@ -45,7 +44,7 @@ export function SecurityInsights() {
     <Card className="col-span-1">
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
-          <shield className="w-5 h-5" />
+          <Shield className="w-5 h-5" />
           <span>Security Insights</span>
         </CardTitle>
         <p className="text-sm text-gray-500">Security recommendations and compliance alerts</p>
@@ -59,11 +58,11 @@ export function SecurityInsights() {
           }`}>
             <div className="flex items-start space-x-3">
               {alert.type === 'critical' ? (
-                <alert-triangle className="w-5 h-5 text-red-600 mt-0.5" />
+                <AlertTriangle className="w-5 h-5 text-red-600 mt-0.5" />
               ) : alert.type === 'warning' ? (
-                <alert-triangle className="w-5 h-5 text-yellow-600 mt-0.5" />
+                <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5" />
               ) : (
-                <info className="w-5 h-5 text-blue-600 mt-0.5" />
+                <Info className="w-5 h-5 text-blue-600 mt-0.5" />
               )}
               
               <div className="flex-1">

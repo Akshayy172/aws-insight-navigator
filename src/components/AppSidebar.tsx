@@ -13,49 +13,49 @@ import {
 } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 import { 
-  layout-dashboard, 
-  chart-bar, 
-  cloud, 
-  shield, 
-  settings,
-  zap,
-  bell
+  LayoutDashboard, 
+  BarChart, 
+  Cloud, 
+  Shield, 
+  Settings,
+  Zap,
+  Bell
 } from "lucide-react";
 
 const navigationItems = [
   {
     title: "Dashboard",
-    icon: layout-dashboard,
+    icon: LayoutDashboard,
     isActive: true
   },
   {
     title: "Cost Analytics",
-    icon: chart-bar,
+    icon: BarChart,
     isActive: false
   },
   {
     title: "Resources",
-    icon: cloud,
+    icon: Cloud,
     isActive: false
   },
   {
     title: "Security",
-    icon: shield,
+    icon: Shield,
     isActive: false
   },
   {
     title: "Optimization",
-    icon: zap,
+    icon: Zap,
     isActive: false
   },
   {
     title: "Alerts",
-    icon: bell,
+    icon: Bell,
     isActive: false
   },
   {
     title: "Settings",
-    icon: settings,
+    icon: Settings,
     isActive: false
   }
 ];
@@ -66,7 +66,7 @@ export function AppSidebar() {
       <SidebarHeader className="p-4">
         <div className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-            <cloud className="w-5 h-5 text-white" />
+            <Cloud className="w-5 h-5 text-white" />
           </div>
           <div>
             <h2 className="font-bold text-lg">CloudScope</h2>
@@ -98,7 +98,7 @@ export function AppSidebar() {
 
       <SidebarFooter className="p-4">
         <Button variant="outline" size="sm" className="w-full">
-          <settings className="w-4 h-4 mr-2" />
+          <Settings className="w-4 h-4 mr-2" />
           Account Settings
         </Button>
       </SidebarFooter>

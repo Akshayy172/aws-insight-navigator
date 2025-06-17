@@ -1,8 +1,7 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { zap, trending-down } from "lucide-react";
+import { Zap, TrendingDown } from "lucide-react";
 
 const optimizationSuggestions = [
   {
@@ -56,13 +55,13 @@ export function OptimizationHub() {
     <Card className="col-span-1">
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
-          <zap className="w-5 h-5" />
+          <Zap className="w-5 h-5" />
           <span>Optimization Hub</span>
         </CardTitle>
         <div className="flex items-center justify-between">
           <p className="text-sm text-gray-500">Cost optimization recommendations</p>
           <div className="flex items-center space-x-2">
-            <trending-down className="w-4 h-4 text-green-600" />
+            <TrendingDown className="w-4 h-4 text-green-600" />
             <span className="text-lg font-bold text-green-600">${totalSavings} potential savings</span>
           </div>
         </div>

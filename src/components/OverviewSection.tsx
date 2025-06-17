@@ -1,7 +1,6 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { cloud, trending-up, trending-down, zap } from "lucide-react";
+import { Cloud, TrendingUp, TrendingDown, Zap } from "lucide-react";
 
 const regionData = [
   { name: "US East (N. Virginia)", code: "us-east-1", status: "active", cost: "$1,234" },
@@ -17,28 +16,28 @@ const quickMetrics = [
     value: "$3,567",
     change: "+12%",
     trend: "up",
-    icon: trending-up
+    icon: TrendingUp
   },
   {
     title: "Cost Savings",
     value: "$892",
     change: "This month",
     trend: "down",
-    icon: trending-down
+    icon: TrendingDown
   },
   {
     title: "Active Resources",
     value: "234",
     change: "Across 4 regions",
     trend: "neutral",
-    icon: cloud
+    icon: Cloud
   },
   {
     title: "Optimization Score",
     value: "87%",
     change: "+5% improvement",
     trend: "up",
-    icon: zap
+    icon: Zap
   }
 ];
 
@@ -80,7 +79,7 @@ export function OverviewSection() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
-            <cloud className="w-5 h-5" />
+            <Cloud className="w-5 h-5" />
             <span>Active AWS Regions</span>
           </CardTitle>
         </CardHeader>

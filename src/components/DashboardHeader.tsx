@@ -2,7 +2,7 @@
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { bell, cloud } from "lucide-react";
+import { Bell, Cloud } from "lucide-react";
 
 export function DashboardHeader() {
   return (
@@ -18,12 +18,12 @@ export function DashboardHeader() {
         
         <div className="flex items-center space-x-4">
           <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
-            <cloud className="w-3 h-3 mr-1" />
+            <Cloud className="w-3 h-3 mr-1" />
             Connected to AWS
           </Badge>
           
           <Button variant="outline" size="sm">
-            <bell className="w-4 h-4 mr-2" />
+            <Bell className="w-4 h-4 mr-2" />
             Alerts (3)
           </Button>
           
