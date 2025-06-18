@@ -2,9 +2,16 @@
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Bell, Cloud } from "lucide-react";
+import { Bell, Cloud, LogOut } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
 
 export function DashboardHeader() {
+  const { user, logout } = useAuth();
+
+  const handleLogout = () => {
+    logout();
+  };
+
   return (
     <header className="border-b border-gray-200 bg-white px-6 py-4">
       <div className="flex items-center justify-between">
@@ -29,12 +36,17 @@ export function DashboardHeader() {
           
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-              <span className="text-sm font-medium text-blue-700">AD</span>
+              <span className="text-sm font-medium text-blue-700">
+                {user?.name?.split(' ').map(n => n[0]).join('') || 'U'}
+              </span>
             </div>
             <div className="text-sm">
-              <p className="font-medium">Admin User</p>
-              <p className="text-gray-500">admin@company.com</p>
+              <p className="font-medium">{user?.name}</p>
+              <p className="text-gray-500">{user?.email}</p>
             </div>
+            <Button variant="ghost" size="sm" onClick={handleLogout}>
+              <LogOut className="w-4 h-4" />
+            </Button>
           </div>
         </div>
       </div>
